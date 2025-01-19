@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://coj50y2ynn3hm"]
+
+[ext_resource type="PackedScene" uid="uid://cg6432xtyi0d1" path="res://ESCENES/world.tscn" id="1_11jru"]
+[ext_resource type="PackedScene" uid="uid://dypawo10flccl" path="res://Draws/hoja.glb" id="2_t58ug"]
+[ext_resource type="PackedScene" uid="uid://dst00nvou2ywr" path="res://Draws/base.glb" id="3_ib08x"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="SubViewport" type="SubViewport" parent="."]
+
+[node name="Node2D" parent="SubViewport" instance=ExtResource("1_11jru")]
+
+[node name="hoja" parent="." instance=ExtResource("2_t58ug")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.14725, 0.114902, -0.885124)
+
+[node name="base" parent="." instance=ExtResource("3_ib08x")]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(0.695071, 0.250279, -0.673971, -0.17968, 0.968174, 0.174225, 0.696126, 1.03731e-08, 0.71792, 0, 1.28696, 2.0469)
+fov = 77.6591
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="Camera3D"]
+transform = Transform3D(0.371172, -0.446332, -0.81426, 0.869613, -0.140386, 0.473356, -0.325585, -0.883787, 0.336028, -0.871111, 1.21192, -1.82844)

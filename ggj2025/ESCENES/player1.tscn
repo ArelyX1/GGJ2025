@@ -1,0 +1,74 @@
+[gd_scene load_steps=9 format=3 uid="uid://c4xtcicy8f5ic"]
+
+[ext_resource type="Script" path="res://Script/character_body_2d.gd" id="1_h48oq"]
+[ext_resource type="Texture2D" uid="uid://dbis3ttchtey3" path="res://Draws/godot_fondo_personaje.png" id="1_t3j68"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6ciuw"]
+size = Vector2(105, 37)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b8pg5"]
+atlas = ExtResource("1_t3j68")
+region = Rect2(1656, 308, 138, 154)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cnnwu"]
+atlas = ExtResource("1_t3j68")
+region = Rect2(1656, 477, 138, 159)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q8dlg"]
+atlas = ExtResource("1_t3j68")
+region = Rect2(1656, 636, 138, 159)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_77dpy"]
+atlas = ExtResource("1_t3j68")
+region = Rect2(1656, 154, 138, 154)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_i31y4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b8pg5")
+}],
+"loop": false,
+"name": &"BOT",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cnnwu")
+}],
+"loop": true,
+"name": &"LEFT",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q8dlg")
+}],
+"loop": true,
+"name": &"RIGHT",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_77dpy")
+}],
+"loop": false,
+"name": &"TOP",
+"speed": 5.0
+}]
+
+[node name="player" type="Node2D"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+script = ExtResource("1_h48oq")
+
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(28.5, 60.5)
+shape = SubResource("RectangleShape2D_6ciuw")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
+position = Vector2(31, 7)
+sprite_frames = SubResource("SpriteFrames_i31y4")
+animation = &"BOT"
