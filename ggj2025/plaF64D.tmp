@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://dhnedege6sm1a"]
+
+[ext_resource type="Script" path="res://script/node_3d.gd" id="1_01tsd"]
+[ext_resource type="ArrayMesh" uid="uid://ty74bn14vnh" path="res://3dobjets/ady_v1.mtl.obj" id="1_jbcu7"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_2bq46"]
+
+[node name="CharacterBody3D" type="CharacterBody3D"]
+
+[node name="Node3D" type="Node3D" parent="."]
+transform = Transform3D(1.5558, 0, 0, 0, 1.36187, 0, 0, 0, 1.01813, 0, 2.06884, 0)
+script = ExtResource("1_01tsd")
+
+[node name="Camera3D" type="Camera3D" parent="Node3D"]
+transform = Transform3D(-0.627276, 0, -0.140212, 0, 0.734286, 0, 0.214257, 0, -0.958536, -0.455343, -0.116791, -6.15832)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.05705, 0)
+mesh = ExtResource("1_jbcu7")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1.5558, 0, 0, 0, 1.36187, 0, 0, 0, 1.01813, 0, 1.66262, 0)
+shape = SubResource("CapsuleShape3D_2bq46")

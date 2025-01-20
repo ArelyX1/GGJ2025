@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://dhnedege6sm1a"]
+
+[ext_resource type="ArrayMesh" uid="uid://ty74bn14vnh" path="res://3dobjets/ady_v1.mtl.obj" id="1_jbcu7"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_fe37l"]
+height = 2.2332
+
+[node name="Node3D" type="Node3D"]
+
+[node name="CharacterBody3D" type="CharacterBody3D" parent="."]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="CharacterBody3D"]
+mesh = ExtResource("1_jbcu7")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D"]
+transform = Transform3D(1.95594, 0, 0, 0, 1.2572, 0, 0, 0, 1, 0, -0.399538, 0)
+shape = SubResource("CapsuleShape3D_fe37l")
