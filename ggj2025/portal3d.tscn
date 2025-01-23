@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://bfu2qa8e33hav"]
+
+[ext_resource type="Script" path="res://portal_3d.gd" id="1_w7cfa"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_1d7tb"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_mhfi3"]
+
+[node name="portal3d" type="Area3D"]
+collision_layer = 4
+collision_mask = 2
+script = ExtResource("1_w7cfa")
+
+[node name="Node3D" type="Node3D" parent="."]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Node3D"]
+transform = Transform3D(1.20005, 0, 0, 0, 0.0551647, 0, 0, 0, 1.31638, 0, 0, 0)
+mesh = SubResource("CylinderMesh_1d7tb")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1.20594, 0, 0, 0, 0.0618377, 0, 0, 0, 1.26506, 0, 0, 0)
+shape = SubResource("CylinderShape3D_mhfi3")

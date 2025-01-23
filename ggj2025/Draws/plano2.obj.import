@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bg6wfgwv6yqw5"
+path="res://.godot/imported/plano2.obj-66025a9a8ee54ec2e8a5752e017ce123.mesh"
+
+[deps]
+
+files=["res://.godot/imported/plano2.obj-66025a9a8ee54ec2e8a5752e017ce123.mesh"]
+
+source_file="res://Draws/plano2.obj"
+dest_files=["res://.godot/imported/plano2.obj-66025a9a8ee54ec2e8a5752e017ce123.mesh", "res://.godot/imported/plano2.obj-66025a9a8ee54ec2e8a5752e017ce123.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

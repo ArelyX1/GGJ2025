@@ -2,8 +2,6 @@ extends Node3D
 
 
 
-var isInTwoD : bool
-var isInThreeD : bool
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -13,10 +11,9 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
+
+
+func _on_portal_3d_body_entered(body: Node3D) -> void:
+	Global.isInThreeD = false
+	Global.isInTwoD = true
 	
-func _on_body_entered(body : Node2D) -> void:
-	if Global.isInTwoD:
-		self.visible = false
-	if Global.isInThreeD:
-		self.visible = true
-		

@@ -1,0 +1,72 @@
+[gd_scene load_steps=6 format=4 uid="uid://jslm3gecxmrr"]
+
+[ext_resource type="PackedScene" uid="uid://dl32audol4x7i" path="res://world2d.tscn" id="1_2cv8u"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_mpofs"]
+viewport_path = NodePath("SubViewport")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7jdr4"]
+resource_local_to_scene = true
+albedo_texture = SubResource("ViewportTexture_mpofs")
+albedo_texture_force_srgb = true
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_7172h"]
+_surfaces = [{
+"aabb": AABB(-2.21835, 0, -3.60381, 4.43669, 0.214065, 7.30063),
+"format": 34896613377,
+"index_count": 36,
+"index_data": PackedByteArray("AAADAAIAAAABAAMABQAHAAYABQAEAAcAAgAFAAAAAgAEAAUAAwAEAAIAAwAHAAQAAAAGAAEAAAAFAAYAAQAHAAMAAQAGAAcA"),
+"name": "Material.002",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("AAAAAP//AAD//wAA//8AAAAAAAAAAAAA//8AAAAAAAAAAP//AAAAAAAA/////wAA////////AAD/////AAAAAA==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_ayi5a"]
+resource_local_to_scene = true
+resource_name = "plano_Plane"
+_surfaces = [{
+"aabb": AABB(-2.21835, 0, -3.60381, 4.43669, 0.214065, 7.30063),
+"attribute_data": PackedByteArray("LIEw2BSpzucsgTDYLIEAwBSp//8sgQDALIEBgDCBzucsgf//LIEymDCB//8sgTKYAYABgI+Auv0BgP//AYAw2P//7P4BgDDYAYAAwP//AIEBgADAAYAymI+Azn8BgDKY"),
+"format": 34896613399,
+"index_count": 36,
+"index_data": PackedByteArray("AQAKAAcAAQAEAAoAEAAWABMAEAANABYACAARAAIACAAOABEACQAMAAYACQAVAAwAAAASAAMAAAAPABIABQAXAAsABQAUABcA"),
+"material": SubResource("StandardMaterial3D_7jdr4"),
+"name": "Material.002",
+"primitive": 3,
+"uv_scale": Vector4(1.99562, 1.99988, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("AAAAAP///78AAAAA//9U1QAAAAD//1TV//8AAP///7///wAA//9U1f//AAD//1TVAAAAAAAA//8AAAAAAABU1QAAAAAAAFTV//8AAAAA/////wAAAABU1f//AAAAAFTVAAD//wAA//8AAP//AAAx1QAA//8AAFTVAAD//////78AAP////8x1QAA/////1TV/////////7////////8x1f///////1TV/////wAA////////AAAx1f////8AAFTV/3//f6oqVNVUVaqq/3//f6oqVNWqqlRV/z//v6oqVNVUVaqq/z//v6oqVNWqqlRV/z//v9SqlKpUVaqq/3//f9SqlKpUVaqq/3//f9SqlKqqqlRV/z//v9SqlKqqqlRV")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_7172h")
+
+[node name="V2plano2d" type="Node3D"]
+transform = Transform3D(1, 6.95035e-05, 0.000296197, -6.97069e-05, 1, 0.000742962, -0.000296149, -0.000742981, 1, 0, 1, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0.000186162, 1.52198e-05, -0.000159978, 0.811513, 0.584335, 9.64427e-05, -0.584335, 0.811513, -0.334505, 2.99239, 4.98688)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0.000366479, 0.000230176, -0.000225879, -0.0117283, 0.999931, 0.000369157, -0.999931, -0.0117282, -0.00061936, 8.88308, 0.00659978)
+light_energy = 15.508
+spot_range = 10.4855
+
+[node name="Plane" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.0303824)
+mesh = SubResource("ArrayMesh_ayi5a")
+skeleton = NodePath("")
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Plane"]
+transform = Transform3D(1, 0, 0, 0, 0.0182725, 0.999833, 0, -0.999833, 0.0182725, 0.297772, 3.96139, 0.246741)
+light_energy = 4.41
+spot_range = 11.8106
+
+[node name="SubViewport" type="SubViewport" parent="."]
+size = Vector2i(1246, 606)
+
+[node name="MAPA2D" parent="SubViewport" instance=ExtResource("1_2cv8u")]

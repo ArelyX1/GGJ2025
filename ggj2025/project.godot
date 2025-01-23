@@ -46,6 +46,12 @@ JUMP={
 ]
 }
 
+[layer_names]
+
+3d_physics/layer_1="enviromment"
+3d_physics/layer_2="player"
+3d_physics/layer_3="portals"
+
 [rendering]
 
 renderer/rendering_method="gl_compatibility"
