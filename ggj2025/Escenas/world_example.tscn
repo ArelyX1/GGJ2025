@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://bbd7ccne300y2"]
+
+[ext_resource type="PackedScene" uid="uid://b8ck41qr4kw42" path="res://ModeloPersonajeExample/Cute Cartoon Character.glb" id="1_h8iud"]
+
+[node name="WorldExample" type="Node3D"]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+
+[node name="Cute Cartoon Character" parent="." instance=ExtResource("1_h8iud")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.653683, 4.76837e-07, 2.38938)
