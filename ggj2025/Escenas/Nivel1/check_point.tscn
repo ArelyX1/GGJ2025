@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://dfv22g03ywycl"]
+
+[ext_resource type="Texture2D" uid="uid://duq86oiw4xct2" path="res://Arte/Arte2D/Escenas/FondoProvisional.jpg" id="1_cvaag"]
+
+[node name="CheckPoint" type="Node2D"]
+
+[node name="Fondo" type="Sprite2D" parent="."]
+position = Vector2(576, 329.25)
+scale = Vector2(1.94888, 1.7494)
+texture = ExtResource("1_cvaag")

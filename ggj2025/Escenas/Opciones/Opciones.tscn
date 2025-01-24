@@ -1,18 +1,18 @@
-[gd_scene load_steps=3 format=3 uid="uid://n1oua6kpc7vf"]
+[gd_scene load_steps=3 format=3 uid="uid://bjq33n5kpl22v"]
 
-[ext_resource type="Script" path="res://Escenas/Menu/MenuScripts/menu.gd" id="1_ri035"]
+[ext_resource type="Script" path="res://Escenas/Opciones/OpcionesScripts/opciones.gd" id="1_0ewqr"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_85coi"]
 bg_color = Color(0.654902, 0.603922, 0.333333, 0.423529)
 
-[node name="Menu" type="Control"]
+[node name="Opciones" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_ri035")
+script = ExtResource("1_0ewqr")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 1
@@ -21,7 +21,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.212823, 0.545082, 0.503441, 1)
+color = Color(0.698684, 0.392579, 0.150509, 1)
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
@@ -31,34 +31,38 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -185.0
-offset_top = -35.0
+offset_top = -148.5
 offset_right = 185.0
-offset_bottom = 262.0
+offset_bottom = 148.5
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 45
 
-[node name="Jugar" type="Button" parent="VBoxContainer"]
+[node name="Sonido" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 50
 theme_override_styles/normal = SubResource("StyleBoxFlat_85coi")
-text = "Jugar"
+text = "Sonido
+"
 
-[node name="Opciones" type="Button" parent="VBoxContainer"]
+[node name="Resolucion" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 50
 theme_override_styles/normal = SubResource("StyleBoxFlat_85coi")
-text = "Opciones"
+text = "Resolución"
 
-[node name="Salir" type="Button" parent="VBoxContainer"]
+[node name="Volver" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 50
 theme_override_styles/normal = SubResource("StyleBoxFlat_85coi")
-text = "Salir"
+text = "Volver"
 
-[connection signal="pressed" from="VBoxContainer/Jugar" to="." method="_on_jugar_pressed"]
-[connection signal="pressed" from="VBoxContainer/Opciones" to="." method="_on_opciones_pressed"]
-[connection signal="pressed" from="VBoxContainer/Salir" to="." method="_on_salir_pressed"]
+[connection signal="pressed" from="VBoxContainer/Sonido" to="." method="_on_jugar_pressed"]
+[connection signal="pressed" from="VBoxContainer/Sonido" to="." method="_on_sonido_pressed"]
+[connection signal="pressed" from="VBoxContainer/Resolucion" to="." method="_on_resolucion_pressed"]
+[connection signal="pressed" from="VBoxContainer/Resolucion" to="." method="_on_opciones_pressed"]
+[connection signal="pressed" from="VBoxContainer/Volver" to="." method="_on_volver_pressed"]
+[connection signal="pressed" from="VBoxContainer/Volver" to="." method="_on_salir_pressed"]
