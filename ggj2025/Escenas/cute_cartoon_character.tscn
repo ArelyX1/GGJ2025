@@ -1,0 +1,23 @@
+[gd_scene load_steps=2 format=3 uid="uid://dr84t6icuurvc"]
+
+[ext_resource type="PackedScene" uid="uid://b8ck41qr4kw42" path="res://ModeloPersonajeExample/Cute Cartoon Character.glb" id="1_r75ig"]
+
+[node name="Cute Cartoon Character" instance=ExtResource("1_r75ig")]
+
+[node name="Sphere_002" parent="Armature/Skeleton3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.48524, -0.455958, 0.0920286)
+
+[node name="Sphere_003" parent="Armature/Skeleton3D" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.48524, -0.455958, 0.0920286)
+
+[node name="Circle" parent="Armature/Skeleton3D" index="2"]
+transform = Transform3D(0.197456, 0.00851968, -0.0507955, -0.0511037, 0.00733414, -0.197424, -0.00641689, 0.203753, 0.00923029, 0.00649934, -0.537859, 0.153899)
+
+[node name="Sphere" parent="Armature/Skeleton3D" index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.90573e-07, -0.140534, 0.118966)
+
+[node name="Sphere_001" parent="Armature/Skeleton3D" index="4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.90573e-07, -0.140534, 0.118966)
+
+[node name="Plane" parent="." index="1"]
+transform = Transform3D(30.1805, 0, 0, 0, 30.1805, 0, 0, 0, 30.1805, 0, -17, 0)
