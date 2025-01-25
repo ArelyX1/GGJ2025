@@ -1,11 +1,11 @@
 extends Node
 
-var isThreeD = false
-var isTwoD = true
+var isThreeD : bool
+var isTwoD : bool
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
-
+	isThreeD = false
+	isTwoD = true
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
