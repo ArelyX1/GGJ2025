@@ -1,0 +1,120 @@
+[gd_scene load_steps=13 format=3 uid="uid://dfv22g03ywycl"]
+
+[ext_resource type="PackedScene" uid="uid://3pptv74762s8" path="res://Arte/Arte2D/Personajes/player_2d.tscn" id="1_1lm2o"]
+[ext_resource type="Texture2D" uid="uid://cxf4nmdy2dm3s" path="res://Escenas/Nivel1/2D/block_1.png" id="1_fd3tm"]
+[ext_resource type="Texture2D" uid="uid://bxh1imebror0w" path="res://Escenas/Nivel1/2D/block_1_no_line.png" id="2_e38qg"]
+[ext_resource type="Texture2D" uid="uid://b03qmjg54a4tk" path="res://Escenas/Nivel1/2D/block_1_no_line_4.png" id="3_o5cp8"]
+[ext_resource type="Texture2D" uid="uid://2qi41001f366" path="res://Escenas/Nivel1/2D/block_1_no_line_3.png" id="4_nx5wj"]
+[ext_resource type="Texture2D" uid="uid://ccfqqufghiqmp" path="res://Escenas/Nivel1/2D/block_1_no_line_2.png" id="5_uuac8"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2bpfe"]
+texture = ExtResource("1_fd3tm")
+margins = Vector2i(1, 11)
+texture_region_size = Vector2i(16, 18)
+8:3/0 = 0
+9:3/0 = 0
+10:3/0 = 0
+8:4/0 = 0
+9:4/0 = 0
+10:4/0 = 0
+8:5/0 = 0
+9:5/0 = 0
+10:5/0 = 0
+7:3/0 = 0
+7:4/0 = 0
+7:5/0 = 0
+8:2/0 = 0
+7:2/0 = 0
+9:2/0 = 0
+10:2/0 = 0
+11:3/0 = 0
+11:2/0 = 0
+11:4/0 = 0
+11:5/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_suiny"]
+texture = ExtResource("2_e38qg")
+margins = Vector2i(5, 15)
+7:2/0 = 0
+7:3/0 = 0
+7:4/0 = 0
+7:5/0 = 0
+8:5/0 = 0
+8:4/0 = 0
+8:3/0 = 0
+8:2/0 = 0
+9:2/0 = 0
+9:3/0 = 0
+9:4/0 = 0
+9:5/0 = 0
+10:4/0 = 0
+10:5/0 = 0
+11:2/0 = 0
+11:3/0 = 0
+11:4/0 = 0
+11:5/0 = 0
+10:2/0 = 0
+10:3/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_f1j3k"]
+texture = ExtResource("3_o5cp8")
+margins = Vector2i(5, 17)
+7:4/0 = 0
+8:4/0 = 0
+7:3/0 = 0
+7:2/0 = 0
+8:2/0 = 0
+8:3/0 = 0
+9:2/0 = 0
+9:3/0 = 0
+10:2/0 = 0
+10:3/0 = 0
+10:4/0 = 0
+9:4/0 = 0
+10:5/0 = 0
+9:5/0 = 0
+8:5/0 = 0
+7:5/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_oo8c1"]
+texture = ExtResource("4_nx5wj")
+margins = Vector2i(5, 17)
+7:2/0 = 0
+8:2/0 = 0
+9:2/0 = 0
+10:2/0 = 0
+10:3/0 = 0
+9:3/0 = 0
+8:3/0 = 0
+7:3/0 = 0
+8:4/0 = 0
+7:4/0 = 0
+9:4/0 = 0
+10:4/0 = 0
+7:5/0 = 0
+8:5/0 = 0
+9:5/0 = 0
+10:5/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_22tc4"]
+texture = ExtResource("5_uuac8")
+
+[sub_resource type="TileSet" id="TileSet_qtyc6"]
+sources/0 = SubResource("TileSetAtlasSource_2bpfe")
+sources/1 = SubResource("TileSetAtlasSource_suiny")
+sources/2 = SubResource("TileSetAtlasSource_f1j3k")
+sources/4 = SubResource("TileSetAtlasSource_oo8c1")
+sources/5 = SubResource("TileSetAtlasSource_22tc4")
+
+[node name="Introduction" type="Node2D"]
+
+[node name="ground_final" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_qtyc6")
+format = 2
+layer_0/tile_data = PackedInt32Array(5, 720897, 2, 196613, 720897, 5, 131079, 458753, 2, 196615, 458753, 3, 262151, 458753, 4, 327687, 458753, 5, 131080, 524289, 2, 196616, 524289, 3, 262152, 524289, 4, 327688, 524289, 5, 131081, 589825, 2, 196617, 589825, 3, 262153, 589825, 4, 327689, 589825, 5, 131082, 655361, 2, 196618, 655361, 3, 262154, 655361, 4, 327690, 655361, 5, 131083, 720897, 2, 196619, 720897, 3, 262155, 720897, 4, 327691, 720897, 5)
+
+[node name="Player" parent="." instance=ExtResource("1_1lm2o")]
+position = Vector2(41, 28)
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+zoom = Vector2(6, 6)
