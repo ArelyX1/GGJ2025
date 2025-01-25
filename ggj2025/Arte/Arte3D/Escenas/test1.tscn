@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://6g0bmvcgufsv"]
+
+[ext_resource type="PackedScene" uid="uid://8i6trg0lf0nt" path="res://Arte/Arte3D/Escenas/celling_fan_spining.glb" id="1_iidou"]
+[ext_resource type="Script" path="res://Arte/Arte3D/Escenas/celling_fan_spining.gd" id="2_58k2x"]
+[ext_resource type="PackedScene" uid="uid://qcldsc4dnvqh" path="res://Arte/Arte3D/Escenas/dormitorio.glb" id="3_7sx3w"]
+
+[node name="Test1" type="Node3D"]
+
+[node name="celling_fan_spining" parent="." instance=ExtResource("1_iidou")]
+script = ExtResource("2_58k2x")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.970984, 0.239144, 0, -0.239144, 0.970984, 0, 1.76197, 8.53042)
+
+[node name="dormitorio" parent="." instance=ExtResource("3_7sx3w")]
