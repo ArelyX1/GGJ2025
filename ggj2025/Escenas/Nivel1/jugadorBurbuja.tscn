@@ -1,0 +1,23 @@
+[gd_scene load_steps=2 format=3 uid="uid://6136weld5ndd"]
+
+[ext_resource type="PackedScene" uid="uid://b4jcycbk1ol3l" path="res://Arte/Arte3D/Personajes/BurbujaPersonaje.glb" id="1_04k71"]
+
+[node name="BurbujaPersonaje" instance=ExtResource("1_04k71")]
+
+[node name="Sphere_003" parent="." index="1"]
+transform = Transform3D(0.321421, 0.00918901, -0.00398411, -0.00921169, 0.32144, -0.00178563, 0.00393139, 0.00189889, 0.321547, 0.090365, 0.45868, 0.619756)
+
+[node name="Sphere_006" parent="." index="3"]
+transform = Transform3D(0.321339, -0.0108404, -0.00597057, 0.0110717, 0.32113, 0.0128313, 0.00552973, -0.0130274, 0.321265, -0.0920162, 0.557099, 0.573258)
+
+[node name="Sphere_007" parent="." index="4"]
+transform = Transform3D(0.310053, 0.033336, 0.0785334, -0.0358245, 0.319523, 0.00580493, -0.0774299, -0.0143457, 0.311786, 0.0963704, 0.549918, 0.57582)
+
+[node name="Sphere_008" parent="." index="5"]
+transform = Transform3D(0.318445, 0.00863012, -0.00337346, -0.0091264, 0.30189, -0.00151194, 0.00389499, 0.0017834, 0.272263, 0.00115777, 0.358328, 0.318663)
+
+[node name="Sphere_009" parent="." index="6"]
+transform = Transform3D(0.321421, 0.00918125, -0.00398411, -0.00921169, 0.321169, -0.00178563, 0.00393139, 0.00189729, 0.321547, -0.0881188, 0.463682, 0.617933)
+
+[node name="AnimationPlayer" parent="." index="7"]
+autoplay = "Animation"

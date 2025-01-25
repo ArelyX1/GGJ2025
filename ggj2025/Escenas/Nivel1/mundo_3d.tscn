@@ -1,10 +1,10 @@
 [gd_scene load_steps=2 format=3 uid="uid://bsl78rjdy1ipm"]
 
-[ext_resource type="PackedScene" uid="uid://co2gdxe5ss7i3" path="res://Arte/Arte3D/Personajes/modeloBurbuja.glb" id="1_nm6ie"]
+[ext_resource type="PackedScene" uid="uid://6136weld5ndd" path="res://Escenas/Nivel1/jugadorBurbuja.tscn" id="1_b7n5m"]
 
 [node name="Mundo3D" type="Node3D"]
 
 [node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.362953, 2.47975)
 
-[node name="modeloBurbuja" parent="." instance=ExtResource("1_nm6ie")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.05868, 0, 0.358278)
+[node name="BurbujaPersonaje" parent="." instance=ExtResource("1_b7n5m")]
