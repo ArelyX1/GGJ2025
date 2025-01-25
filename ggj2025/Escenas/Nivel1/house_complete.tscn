@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://d0v1w3b7cl6x8"]
+
+[ext_resource type="PackedScene" uid="uid://cku0aeof5gwk6" path="res://Arte/Arte3D/Escenas/Casa.glb" id="1_4ynlv"]
+[ext_resource type="PackedScene" uid="uid://b1nqrnah4w7tk" path="res://Arte/Arte3D/Escenas/bathroom.glb" id="2_odn3x"]
+
+[node name="HouseComplete" type="Node3D"]
+
+[node name="Casa" parent="." instance=ExtResource("1_4ynlv")]
+transform = Transform3D(3.15243, 0, 0, 0, 2.22538, 0, 0, 0, 2.78709, 0.0550764, -0.022431, -0.000367209)
+
+[node name="bathroom" parent="." instance=ExtResource("2_odn3x")]
+transform = Transform3D(0.179977, 0, 0, 0, 0.239832, 0, 0, 0, 0.192036, -1.00164, 0.145474, 2.83784)
