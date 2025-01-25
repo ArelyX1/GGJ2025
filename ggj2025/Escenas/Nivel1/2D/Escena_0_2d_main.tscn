@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://dfv22g03ywycl"]
+
+[ext_resource type="PackedScene" uid="uid://bm1pksu4jmhy5" path="res://Arte/Arte2D/Personajes/player_2d.tscn" id="1_1lm2o"]
+
+[sub_resource type="TileSet" id="TileSet_lgusi"]
+
+[node name="Introduction" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_lgusi")
+format = 2
+
+[node name="Player" parent="." instance=ExtResource("1_1lm2o")]
+position = Vector2(41, 28)
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+zoom = Vector2(6, 6)
