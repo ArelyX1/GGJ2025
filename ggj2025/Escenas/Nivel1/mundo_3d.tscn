@@ -1,10 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://cbfvsaicb1qtc"]
+[gd_scene load_steps=2 format=3 uid="uid://bsl78rjdy1ipm"]
 
-[ext_resource type="PackedScene" uid="uid://bx2v24my8g2nr" path="res://Arte/Arte3D/Personajes/burbujas.glb" id="1_wpx0v"]
+[ext_resource type="PackedScene" uid="uid://co2gdxe5ss7i3" path="res://Arte/Arte3D/Personajes/modeloBurbuja.glb" id="1_nm6ie"]
 
 [node name="Mundo3D" type="Node3D"]
 
 [node name="Camera3D" type="Camera3D" parent="."]
 
-[node name="burbujas" parent="." instance=ExtResource("1_wpx0v")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.163355, 0.049121, -0.830519)
+[node name="modeloBurbuja" parent="." instance=ExtResource("1_nm6ie")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.05868, 0, 0.358278)
