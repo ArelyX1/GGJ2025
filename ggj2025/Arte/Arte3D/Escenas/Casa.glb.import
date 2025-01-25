@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://co2gdxe5ss7i3"
-path="res://.godot/imported/modeloBurbuja.glb-5b7a7adb896ace0a34126936755010a8.scn"
+uid="uid://c8xhlaas5itoi"
+path="res://.godot/imported/Casa.glb-0bb84a3249f3c2a634a469196bff0d89.scn"
 
 [deps]
 
-source_file="res://Arte/Arte3D/Personajes/modeloBurbuja.glb"
-dest_files=["res://.godot/imported/modeloBurbuja.glb-5b7a7adb896ace0a34126936755010a8.scn"]
+source_file="res://Arte/Arte3D/Escenas/Casa.glb"
+dest_files=["res://.godot/imported/Casa.glb-0bb84a3249f3c2a634a469196bff0d89.scn"]
 
 [params]
 
