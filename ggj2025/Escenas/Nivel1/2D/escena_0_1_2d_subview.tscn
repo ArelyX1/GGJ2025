@@ -1,9 +1,10 @@
-[gd_scene load_steps=11 format=3 uid="uid://odbxofedyj6d"]
+[gd_scene load_steps=12 format=3 uid="uid://odbxofedyj6d"]
 
+[ext_resource type="Script" path="res://Escenas/Nivel1/2D/escena_0_1_2d_subview.gd" id="1_mx05y"]
 [ext_resource type="Texture2D" uid="uid://0i86lpuwdkua" path="res://Escenas/Nivel1/2D/fondo_color.png" id="2_7vc7d"]
-[ext_resource type="PackedScene" uid="uid://3pptv74762s8" path="res://Arte/Arte2D/Personajes/player_2d.tscn" id="3_3ptce"]
 [ext_resource type="Texture2D" uid="uid://dtrat2sleba8s" path="res://Escenas/Nivel1/2D/paisaje_base1.png" id="3_pdnde"]
 [ext_resource type="Texture2D" uid="uid://cc77wpva1sfw" path="res://Escenas/Nivel1/2D/camino_base1.png" id="3_yjqwd"]
+[ext_resource type="PackedScene" uid="uid://cg7i7lm8huj3f" path="res://Arte/Arte2D/Personajes/player_2d_menu_only.tscn" id="4_m8y4d"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6k3i3"]
 texture = ExtResource("3_yjqwd")
@@ -201,6 +202,7 @@ size = Vector2(9.99996, 301)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_573tg"]
 
 [node name="Escena_0_1_2d" type="Node2D"]
+script = ExtResource("1_mx05y")
 
 [node name="TileMap" type="TileMap" parent="."]
 texture_filter = 1
@@ -250,9 +252,6 @@ position = Vector2(244, 260)
 rotation = -5.45764
 shape = SubResource("RectangleShape2D_e40wf")
 
-[node name="Player" parent="." instance=ExtResource("3_3ptce")]
-position = Vector2(136, 288)
-
 [node name="Area2D" type="Area2D" parent="."]
 position = Vector2(0, -8)
 
@@ -261,4 +260,7 @@ position = Vector2(138, 170)
 shape = SubResource("RectangleShape2D_573tg")
 debug_color = Color(0.624791, 0.529544, 0.147585, 0.42)
 
-[connection signal="body_entered" from="Area2D" to="Player" method="_on_area_2d_body_entered"]
+[node name="player_2d_menu_only" parent="." instance=ExtResource("4_m8y4d")]
+position = Vector2(135, 288)
+
+[connection signal="body_entered" from="Area2D" to="player_2d_menu_only" method="_on_area_2d_body_entered"]

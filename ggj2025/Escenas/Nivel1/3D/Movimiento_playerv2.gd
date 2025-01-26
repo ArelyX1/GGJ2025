@@ -21,8 +21,8 @@ func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	# Ajustamos la posición inicial de la cámara en -current_camera_distance
 	$CameraArm.position.z = current_camera_distance
-	SPEED = 5.0
-	self.visible = true
+	SPEED = 0.0
+	self.visible = false
 
 
 func _physics_process(delta: float) -> void:
@@ -30,7 +30,7 @@ func _physics_process(delta: float) -> void:
 		self.visible = true
 		SPEED = 5.0
 		Global.before = true
-		get_parent().start_camera_transition(get_parent().get_node("JUGADOR2/Cam_player"), get_parent().get_node("JUGADOR2/p1"))
+		#get_parent().start_camera_transition(get_parent().get_node("JUGADOR/Node3D/CameraArm/Camera3D"), get_parent().get_node("JUGADOR/p1"))
 	if Input.is_action_just_pressed("ui_cancel"):
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	
@@ -70,3 +70,5 @@ func _input(event):
 		elif event.button_index == MOUSE_BUTTON_WHEEL_DOWN:
 			current_camera_distance = min(current_camera_distance + 1, MAX_CAMERA_DISTANCE)
 			$CameraArm.position.z = -current_camera_distance
+
+##		get_parent().start_camera_transition(get_parent().get_node("JUGADOR2/CameraArm2/Cam_player"), get_parent().get_node("JUGADOR2/CameraArm2/p1"))

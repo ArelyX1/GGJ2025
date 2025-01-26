@@ -83,9 +83,6 @@ size = Vector2i(287, 307)
 
 [node name="Escena_0_1_2d" parent="SubViewport" instance=ExtResource("1_khm3o")]
 
-[node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(-1, 8.7303e-08, 4.57535e-09, 0, -0.0523359, 0.99863, 8.74228e-08, 0.99863, 0.0523359, 0, 2.11674, 0)
-
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.783824, 0.620984, 0, -0.620984, 0.783824, 0, 1.42502, 2.46791)
 light_energy = 3.811
