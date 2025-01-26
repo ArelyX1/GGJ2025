@@ -1,9 +1,10 @@
-[gd_scene load_steps=32 format=4 uid="uid://b01malufkfygd"]
+[gd_scene load_steps=33 format=4 uid="uid://b01malufkfygd"]
 
 [ext_resource type="Script" path="res://Escenas/Nivel1/3D/escena_0_1_3d_main.gd" id="1_te0bo"]
 [ext_resource type="PackedScene" uid="uid://d0v1w3b7cl6x8" path="res://Escenas/Nivel1/house_complete.tscn" id="3_qd05o"]
 [ext_resource type="PackedScene" uid="uid://dvkqn111jkott" path="res://Escenas/Nivel1/3D/aro_escene_0.tscn" id="3_wsi8p"]
 [ext_resource type="Script" path="res://Escenas/Nivel1/3D/Movimiento_playerv2.gd" id="4_7bnq3"]
+[ext_resource type="Script" path="res://Escenas/Nivel1/house_complete_collisioners.gd" id="4_ovvfe"]
 [ext_resource type="PackedScene" uid="uid://cv50gbi5it8xn" path="res://Escenas/Nivel1/MOVIMIENTO PERSONAJE FUNCIONAL/JugadorBurbujaFunc.tscn" id="4_rbf87"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o5tbb"]
@@ -378,6 +379,7 @@ script = ExtResource("1_te0bo")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30.2001, 11.2081, -52.2087)
 
 [node name="HouseComplete" parent="." instance=ExtResource("3_qd05o")]
+script = ExtResource("4_ovvfe")
 
 [node name="camera_2d" type="Camera3D" parent="."]
 transform = Transform3D(-1, 8.74228e-08, 3.82137e-15, 0, -4.37114e-08, 1, 8.74228e-08, 1, 4.37114e-08, -30.1973, 13.7712, -51.8916)

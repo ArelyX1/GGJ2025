@@ -1,5 +1,40 @@
-[gd_scene load_steps=2 format=3 uid="uid://cghqa8y0ab4jv"]
+[gd_scene load_steps=6 format=3 uid="uid://cghqa8y0ab4jv"]
 
 [ext_resource type="PackedScene" uid="uid://qcldsc4dnvqh" path="res://Arte/Arte3D/Escenas/dormitorio.glb" id="1_vpdvf"]
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_wqal2"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_oni64"]
+size = Vector3(1.0018, 1.97833, 0.169067)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_xsw77"]
+size = Vector3(2.08115, 1, 2.1424)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_3u46l"]
+size = Vector3(0.508307, 5.26813, 8.77385)
+
 [node name="dormitorio" instance=ExtResource("1_vpdvf")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="door_frame_metal" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="door_frame_metal/StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 0.999999, 0, 0, 0, 0.999999, -0.446646, 1.48586, -0.132904)
+shape = SubResource("BoxShape3D_wqal2")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="door_heavy_metal" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="door_heavy_metal/StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 0.999964, 0, -2.98023e-07, 0, 1, 0.53568, 1.02834, -0.0691559)
+shape = SubResource("BoxShape3D_oni64")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Floor" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Floor/StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0460052, 0, 0.0221863)
+shape = SubResource("BoxShape3D_xsw77")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Wall" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Wall/StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.04235, 2.36173, 0.0502126)
+shape = SubResource("BoxShape3D_3u46l")
