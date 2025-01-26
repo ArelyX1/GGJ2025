@@ -31,7 +31,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.0262, -1.68867, -22.6339)
 shape = SubResource("BoxShape3D_h6i7j")
 
 [node name="camera_2d" type="Camera3D" parent="."]
-transform = Transform3D(-1, 8.74228e-08, 3.82137e-15, 0, -4.37114e-08, 1, 8.74228e-08, 1, 4.37114e-08, -30.1973, 12.8987, -51.8916)
+transform = Transform3D(-1, 8.74228e-08, 3.82137e-15, 0, -4.37114e-08, 1, 8.74228e-08, 1, 4.37114e-08, -30.3018, 12.2531, -52.2336)
 
 [node name="JUGADOR" parent="." instance=ExtResource("5_tor5q")]
 transform = Transform3D(0.767534, 0, 0.641008, 0, 1, 0, -0.641008, 0, 0.767534, -30.4609, 11.223, -52.3268)
