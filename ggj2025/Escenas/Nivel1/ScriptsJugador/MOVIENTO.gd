@@ -20,8 +20,8 @@ func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	# Ajustamos la posición inicial de la cámara en -current_camera_distance
 	$CameraArm.position.z = current_camera_distance
-	SPEED = 5.0
-	self.visible = true
+	SPEED = 0
+	self.visible = false
 
 
 func _physics_process(delta: float) -> void:
