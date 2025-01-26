@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://d0v1w3b7cl6x8"]
+[gd_scene load_steps=10 format=3 uid="uid://d0v1w3b7cl6x8"]
 
 [ext_resource type="PackedScene" uid="uid://c8xhlaas5itoi" path="res://Arte/Arte3D/Escenas/Casa.glb" id="1_4ynlv"]
 [ext_resource type="PackedScene" uid="uid://4bb74bwj3k5d" path="res://Arte/Arte3D/Escenas/bathroom.glb" id="2_odn3x"]
@@ -17,6 +17,8 @@ sky_material = SubResource("ProceduralSkyMaterial_jauqg")
 background_mode = 2
 sky = SubResource("Sky_4tdof")
 tonemap_mode = 2
+
+[sub_resource type="SeparationRayShape3D" id="SeparationRayShape3D_nr6h7"]
 
 [node name="HouseComplete" type="Node3D"]
 
@@ -44,3 +46,9 @@ transform = Transform3D(-5.018, 0, 0.318913, 0, 3.93254, 0, -0.386995, 0, -4.135
 
 [node name="Sala" parent="." instance=ExtResource("5_yqx3a")]
 transform = Transform3D(-4.69645, 0, 0.373388, 0, 5.57422, 0, -0.38125, 0, -4.59961, 50.9741, 3.79483, 16.8875)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+visible = false
+shape = SubResource("SeparationRayShape3D_nr6h7")
