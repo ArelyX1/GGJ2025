@@ -25,3 +25,7 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 	Global.isThreeD = true
 	Global.isTwoD = false
 	print("entro XD")
+
+
+func _on_area_2d_body_entered_v2(body: Node2D) -> void:
+	get_tree().change_scene_to_file("res://Escenas/Nivel1/Tests/test_escena_0_1_3d_main.tscn")
