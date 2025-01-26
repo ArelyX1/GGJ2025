@@ -39,3 +39,7 @@ func start_camera_transition(to_camera: Camera3D, target: Node3D):
  
 # donde dice "CameraPlayer" es a la camara que deseas cambiar y el "p1" es el punto o nodo vacio en el mapa donde se colocara
 #get_parent().start_camera_transition(get_parent().get_node("CameraPlayer"), get_parent().get_node("p1"))
+
+
+func _on_area_3d_body_entered222(body: Node3D) -> void:
+	pass # Replace with function body.

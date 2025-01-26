@@ -71,7 +71,7 @@ func _input(event):
 
 
 func _on_area_3d_body_entered(body: Node3D) -> void:
-	get_parent().start_camera_transition(get_parent().get_node("JUGADOR/CameraArm2/main_cam_player"), get_parent().get_node("res://Escenas/win.tscn"))
+	get_tree().change_scene_to_file("res://Escenas/win.tscn")
 
 
 func _on_area_3d_2_body_entered(body: Node3D) -> void:
