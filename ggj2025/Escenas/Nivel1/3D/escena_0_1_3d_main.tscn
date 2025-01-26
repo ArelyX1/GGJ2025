@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://b01malufkfygd"]
+
+[ext_resource type="PackedScene" uid="uid://oadd7mk0bbjv" path="res://Arte/Arte3D/Personajes/player_3d.tscn" id="1_f7e0i"]
+[ext_resource type="PackedScene" uid="uid://c81tmch6yhxwq" path="res://Arte/Arte3D/Escenas/portal_3d.tscn" id="3_h4syf"]
+[ext_resource type="PackedScene" uid="uid://dvkqn111jkott" path="res://Escenas/Nivel1/3D/aro_escene_0.tscn" id="3_wsi8p"]
+
+[node name="Escena_0_1_3d_main" type="Node3D"]
+
+[node name="Player" parent="." instance=ExtResource("1_f7e0i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.96494, 0.693019, 0)
+
+[node name="Portal_3d" parent="." instance=ExtResource("3_h4syf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.58128, 0.0433202, 0)
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(-1, 8.74228e-08, 3.82137e-15, 0, -4.37114e-08, 1, 8.74228e-08, 1, 4.37114e-08, 0, 1.95426, 0)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 2.53098, 0)
+light_color = Color(0.932902, 0.916317, 0.689734, 1)
+light_energy = 7.848
+spot_range = 11.0343
+
+[node name="aro_escene0" parent="." instance=ExtResource("3_wsi8p")]

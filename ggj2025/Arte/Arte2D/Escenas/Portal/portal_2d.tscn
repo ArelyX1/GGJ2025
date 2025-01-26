@@ -1,0 +1,57 @@
+[gd_scene load_steps=5 format=3 uid="uid://xwgd7h0y1imw"]
+
+[ext_resource type="Texture2D" uid="uid://bsd4txq1sgjrh" path="res://Arte/Arte2D/Escenas/Portal/portal_1.png" id="1_uvssi"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jxu8s"]
+texture = ExtResource("1_uvssi")
+margins = Vector2i(7, 12)
+texture_region_size = Vector2i(20, 20)
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+6:3/0 = 0
+6:4/0 = 0
+6:5/0 = 0
+5:4/0 = 0
+5:3/0 = 0
+5:5/0 = 0
+4:5/0 = 0
+4:4/0 = 0
+4:3/0 = 0
+3:3/0 = 0
+2:3/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+2:5/0 = 0
+2:6/0 = 0
+3:6/0 = 0
+3:5/0 = 0
+3:7/0 = 0
+2:7/0 = 0
+4:7/0 = 0
+5:7/0 = 0
+5:6/0 = 0
+4:6/0 = 0
+6:7/0 = 0
+6:6/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_jsvvx"]
+sources/0 = SubResource("TileSetAtlasSource_jxu8s")
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_huvvq"]
+radius = 28.0
+
+[node name="Portal_2d" type="Area2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+texture_filter = 1
+tile_set = SubResource("TileSet_jsvvx")
+format = 2
+layer_0/tile_data = PackedInt32Array(-131074, 131072, 2, -65538, 131072, 3, -2, 131072, 4, 65534, 131072, 5, 131070, 131072, 6, 196606, 131072, 7, -131073, 196608, 2, -65537, 196608, 3, -1, 196608, 4, 65535, 196608, 5, 131071, 196608, 6, 196607, 196608, 7, -196608, 262144, 2, -131072, 262144, 3, -65536, 262144, 4, 0, 262144, 5, 65536, 262144, 6, 131072, 262144, 7, -196607, 327680, 2, -131071, 327680, 3, -65535, 327680, 4, 1, 327680, 5, 65537, 327680, 6, 131073, 327680, 7, -196606, 393216, 2, -131070, 393216, 3, -65534, 393216, 4, 2, 393216, 5, 65538, 393216, 6, 131074, 393216, 7)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(8, 0)
+shape = SubResource("CircleShape2D_huvvq")
+debug_color = Color(0.82101, 0.373619, 0.401102, 0.42)
