@@ -23,13 +23,14 @@ func _ready():
 	SPEED = 0
 	self.visible = false
 
-
+ 
 func _physics_process(delta: float) -> void:
 	if Global.isMenu == false && Global.before == false:
 		self.visible = true
 		SPEED = 5.0
 		Global.before = true
 		get_parent().start_camera_transition(get_parent().get_node("JUGADOR/CameraArm2/main_cam_player"), get_parent().get_node("JUGADOR/CameraArm2/PP1"))
+	if 
 	if Input.is_action_just_pressed("ui_cancel"):
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	

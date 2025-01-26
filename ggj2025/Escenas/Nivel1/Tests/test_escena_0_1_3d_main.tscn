@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://jdjpy51r33fs"]
+[gd_scene load_steps=8 format=3 uid="uid://jdjpy51r33fs"]
 
 [ext_resource type="Script" path="res://Escenas/Nivel1/3D/escena_0_1_3d_main.gd" id="1_ejgjt"]
 [ext_resource type="PackedScene" uid="uid://dvkqn111jkott" path="res://Escenas/Nivel1/3D/aro_escene_0.tscn" id="2_h00mg"]
 [ext_resource type="PackedScene" uid="uid://d0v1w3b7cl6x8" path="res://Escenas/Nivel1/house_complete.tscn" id="3_anehp"]
+[ext_resource type="Script" path="res://Escenas/Nivel1/Tests/progress_bar.gd" id="5_l23cm"]
 [ext_resource type="PackedScene" uid="uid://cv50gbi5it8xn" path="res://Escenas/Nivel1/MOVIMIENTO PERSONAJE FUNCIONAL/JugadorBurbujaFunc.tscn" id="5_tor5q"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_3eerl"]
@@ -43,3 +44,13 @@ transform = Transform3D(1, 8.74228e-08, -3.19744e-14, -8.44439e-08, 0.965926, 0.
 
 [node name="PP1" type="Node3D" parent="JUGADOR/CameraArm2"]
 transform = Transform3D(-1, -8.74228e-08, 0, -8.44439e-08, 0.965926, 0.258819, -2.26267e-08, 0.258819, -0.965926, 5.96046e-08, 1.485, -1.339)
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+offset_right = 4.0
+offset_bottom = 27.0
+scale = Vector2(1.84, 1)
+max_value = 3.0
+step = 1.0
+value = 3.0
+fill_mode = 1
+script = ExtResource("5_l23cm")
