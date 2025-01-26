@@ -30,7 +30,7 @@ func _physics_process(delta: float) -> void:
 		self.visible = true
 		SPEED = 5.0
 		Global.before = true
-		#get_parent().start_camera_transition(get_parent().get_node("JUGADOR/Node3D/CameraArm/Camera3D"), get_parent().get_node("JUGADOR/p1"))
+		get_parent().start_camera_transition(get_parent().get_node("Player/CameraArm/player_cam"), get_parent().get_node("Player/CameraArm/p1"))
 	if Input.is_action_just_pressed("ui_cancel"):
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	

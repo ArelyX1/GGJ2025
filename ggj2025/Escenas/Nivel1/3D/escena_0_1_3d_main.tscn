@@ -381,58 +381,64 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30.2001, 11.2081, -52.2087)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -33.656, 10.7303, -60.8314)
 shape = SubResource("BoxShape3D_3eerl")
 
-[node name="CharacterBody3D" type="CharacterBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30.2, 11.208, -52.209)
+[node name="camera_2d" type="Camera3D" parent="."]
+transform = Transform3D(-1, 8.74228e-08, 3.82137e-15, 0, -4.37114e-08, 1, 8.74228e-08, 1, 4.37114e-08, -30.1973, 13.7712, -51.8916)
+
+[node name="Player" type="CharacterBody3D" parent="."]
+transform = Transform3D(-0.0314631, 0, -0.999505, 0, 1, 0, 0.999505, 0, -0.0314631, -30.2, 11.4939, -52.209)
 up_direction = Vector3(-0.999452, 0.0330944, 0)
 script = ExtResource("4_7bnq3")
 
-[node name="Sphere_002" type="MeshInstance3D" parent="CharacterBody3D"]
+[node name="Sphere_002" type="MeshInstance3D" parent="Player"]
 transform = Transform3D(-0.320844, -0.00930353, -0.0196097, -0.00299979, 0.306756, -0.0964545, 0.0214965, -0.0960517, -0.306143, -0.0953117, 0.462685, 0.585466)
 mesh = SubResource("ArrayMesh_0y35q")
 skeleton = NodePath("")
 
-[node name="Sphere_003" type="MeshInstance3D" parent="CharacterBody3D"]
+[node name="Sphere_003" type="MeshInstance3D" parent="Player"]
 transform = Transform3D(-0.320844, -0.00930353, -0.0196097, -0.00678176, 0.318961, -0.0403668, 0.020618, -0.0398612, -0.31843, 0.090365, 0.45868, 0.619756)
 mesh = SubResource("ArrayMesh_0djw3")
 skeleton = NodePath("")
 
-[node name="Sphere_005" type="MeshInstance3D" parent="CharacterBody3D"]
+[node name="Sphere_005" type="MeshInstance3D" parent="Player"]
 transform = Transform3D(-0.320844, -0.00930353, -0.0196097, -0.00299979, 0.306756, -0.0964545, 0.0214965, -0.0960517, -0.306143, 0.0893595, 0.464411, 0.579058)
 mesh = SubResource("ArrayMesh_5u514")
 skeleton = NodePath("")
 
-[node name="Sphere_006" type="MeshInstance3D" parent="CharacterBody3D"]
+[node name="Sphere_006" type="MeshInstance3D" parent="Player"]
 transform = Transform3D(0.321421, 0.00918898, -0.0039841, -0.00921166, 0.32144, -0.00178563, 0.00393139, 0.00189889, 0.321547, -0.0920162, 0.54779, 0.573387)
 mesh = SubResource("ArrayMesh_cw8oa")
 skeleton = NodePath("")
 
-[node name="Sphere_007" type="MeshInstance3D" parent="CharacterBody3D"]
+[node name="Sphere_007" type="MeshInstance3D" parent="Player"]
 transform = Transform3D(0.312054, 0.0119687, 0.0767512, -0.0114647, 0.321354, -0.00349923, -0.0768281, 0.000659302, 0.312264, 0.0963704, 0.542391, 0.575691)
 mesh = SubResource("ArrayMesh_s1gde")
 skeleton = NodePath("")
 
-[node name="Sphere_008" type="MeshInstance3D" parent="CharacterBody3D"]
+[node name="Sphere_008" type="MeshInstance3D" parent="Player"]
 transform = Transform3D(-0.317052, -0.00919358, -0.019378, -0.00910282, 0.317642, -0.00176453, 0.0194208, -0.00120542, -0.317181, 0.00115777, 0.347267, 0.318663)
 mesh = SubResource("ArrayMesh_53erw")
 skeleton = NodePath("")
 
-[node name="Sphere_009" type="MeshInstance3D" parent="CharacterBody3D"]
+[node name="Sphere_009" type="MeshInstance3D" parent="Player"]
 transform = Transform3D(-0.320844, -0.00930353, -0.0196097, -0.00678176, 0.318961, -0.0403668, 0.020618, -0.0398612, -0.31843, -0.0876881, 0.463782, 0.617681)
 mesh = SubResource("ArrayMesh_f4013")
 skeleton = NodePath("")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="CharacterBody3D"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Player"]
 libraries = {
 "": SubResource("AnimationLibrary_qtume")
 }
 autoplay = "Animation"
 playback_auto_capture_duration = -1.1
 
-[node name="CameraArm" type="Node3D" parent="CharacterBody3D"]
+[node name="CameraArm" type="Node3D" parent="Player"]
 
-[node name="Camera3D" type="Camera3D" parent="CharacterBody3D/CameraArm"]
+[node name="player_cam" type="Camera3D" parent="Player/CameraArm"]
 transform = Transform3D(1, 8.74228e-08, -3.19744e-14, -8.44439e-08, 0.965926, 0.258819, -2.26267e-08, 0.258819, -0.965926, 0, 1.48531, -1.33937)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D"]
+[node name="p1" type="Node3D" parent="Player/CameraArm"]
+transform = Transform3D(-1, 8.74228e-08, 0, -8.44439e-08, -0.965926, -0.258819, -2.26267e-08, -0.258819, 0.965926, 0, 1.485, -1.339)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Player"]
 transform = Transform3D(-0.679889, 0, -0.0450217, 0, 0.60002, 0, 0.0499995, 0, -0.612201, 0.00270709, 0.329478, 0.317412)
 shape = SubResource("SphereShape3D_ofaoh")
