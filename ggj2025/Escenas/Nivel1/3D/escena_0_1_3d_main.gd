@@ -28,7 +28,7 @@ func _process(delta):
 func start_camera_transition(to_camera: Camera3D, target: Node3D):
 	transitioning = true
 	camera1 = get_node("camera_2d") 
-	camera2 = get_node("Player/CameraArm/player_cam") 
+	camera2 = get_node("JUGADOR/CameraArm2/main_cam_player") 
 	camera1.current = false
 	camera2.current = false
 	to_camera.current = true

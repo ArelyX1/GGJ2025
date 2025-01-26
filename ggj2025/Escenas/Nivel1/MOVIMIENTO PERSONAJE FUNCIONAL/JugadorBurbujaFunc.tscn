@@ -409,7 +409,7 @@ playback_auto_capture_duration = -1.1
 
 [node name="CameraArm" type="Node3D" parent="."]
 
-[node name="Camera3D" type="Camera3D" parent="CameraArm"]
+[node name="main_cam_player" type="Camera3D" parent="CameraArm"]
 transform = Transform3D(1, 8.74228e-08, -3.19744e-14, -8.44439e-08, 0.965926, 0.258819, -2.26267e-08, 0.258819, -0.965926, 0, 1.48531, -1.33937)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
