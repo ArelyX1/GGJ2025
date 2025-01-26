@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://b7dy1qkxc2lut"]
+
+[ext_resource type="PackedScene" uid="uid://co21hndns5yml" path="res://Arte/Arte3D/Escenas/Sala.glb" id="1_k4ueg"]
+
+[node name="Sala" instance=ExtResource("1_k4ueg")]
+
+[node name="coffee_table_001" parent="." index="14"]
+transform = Transform3D(1.48183, 0, 0, 0, 1.48562, 0, 0, 0, 1.31417, -0.0825758, -0.641679, 0.502365)
+
+[node name="drink_001" parent="." index="15"]
+transform = Transform3D(1.48183, 0, 0, 0, 1.48562, 0, 0, 0, 1.31417, -0.657627, -0.205915, 0.64628)
+
+[node name="sofa_001" parent="." index="16"]
+transform = Transform3D(1.9981, 0, 0, 0, 2.05008, 0, 0, 0, 1.31417, -0.0367503, -0.726846, -2.61077)
+
+[node name="tv_wall_001" parent="." index="17"]
+transform = Transform3D(-1.48775, 0, 0.0179473, 0, 1.48562, 0, -0.0204443, 0, -1.30604, -0.0189218, -0.718261, 3.29219)
