@@ -19,6 +19,11 @@ config/icon="res://icon.svg"
 
 Global="*res://ScriptsGlobal/Global.gd"
 
+[display]
+
+window/size/mode=3
+window/size/initial_position=Vector2i(0, 850)
+
 [filesystem]
 
 import/blender/enabled=false
