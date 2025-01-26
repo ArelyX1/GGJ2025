@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://yaybw0hk0b5b"]
+
+[ext_resource type="PackedScene" uid="uid://4bb74bwj3k5d" path="res://Arte/Arte3D/Escenas/bathroom.glb" id="1_cja5s"]
+
+[node name="bathroom" instance=ExtResource("1_cja5s")]

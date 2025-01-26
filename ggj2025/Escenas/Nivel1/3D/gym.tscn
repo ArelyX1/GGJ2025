@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://m3kbqkuqe7he"]
+
+[ext_resource type="PackedScene" uid="uid://bh515uqw2ds86" path="res://Arte/Arte3D/Escenas/Gym.glb" id="1_05dmy"]
+
+[node name="Gym" instance=ExtResource("1_05dmy")]

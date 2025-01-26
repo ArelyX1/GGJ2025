@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://cghqa8y0ab4jv"]
+
+[ext_resource type="PackedScene" uid="uid://qcldsc4dnvqh" path="res://Arte/Arte3D/Escenas/dormitorio.glb" id="1_vpdvf"]
+
+[node name="dormitorio" instance=ExtResource("1_vpdvf")]
