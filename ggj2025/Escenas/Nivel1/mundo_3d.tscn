@@ -1,6 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://bsl78rjdy1ipm"]
+[gd_scene load_steps=2 format=3 uid="uid://clfta356ekpt"]
 
-[ext_resource type="PackedScene" uid="uid://6136weld5ndd" path="res://Escenas/Nivel1/jugadorBurbuja.tscn" id="1_b7n5m"]
+[ext_resource type="PackedScene" uid="uid://6136weld5ndd" path="res://Escenas/Nivel1/Jugador.tscn" id="1_b7n5m"]
 
 [node name="Mundo3D" type="Node3D"]
 
