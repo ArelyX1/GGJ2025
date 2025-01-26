@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://tifgev3mkfp6"
-path="res://.godot/imported/pencil_rolling.glb-7e7d20ce9e1177239e1afa254715cceb.scn"
+uid="uid://b4jcycbk1ol3l"
+path="res://.godot/imported/BurbujaPersonaje.glb-e7e1b15ce617343ebfc0f5d0a397f543.scn"
 
 [deps]
 
-source_file="res://Arte/Arte3D/Escenas/pencil_rolling.glb"
-dest_files=["res://.godot/imported/pencil_rolling.glb-7e7d20ce9e1177239e1afa254715cceb.scn"]
+source_file="res://Arte/Arte3D/Personajes/BurbujaPersonaje.glb"
+dest_files=["res://.godot/imported/BurbujaPersonaje.glb-e7e1b15ce617343ebfc0f5d0a397f543.scn"]
 
 [params]
 

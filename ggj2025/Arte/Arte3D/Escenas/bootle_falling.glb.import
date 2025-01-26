@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://tifgev3mkfp6"
-path="res://.godot/imported/pencil_rolling.glb-7e7d20ce9e1177239e1afa254715cceb.scn"
+uid="uid://bofouug3skmvi"
+path="res://.godot/imported/bootle_falling.glb-8938a5a4802274ebf8c362bf39b2373e.scn"
 
 [deps]
 
-source_file="res://Arte/Arte3D/Escenas/pencil_rolling.glb"
-dest_files=["res://.godot/imported/pencil_rolling.glb-7e7d20ce9e1177239e1afa254715cceb.scn"]
+source_file="res://Arte/Arte3D/Escenas/bootle_falling.glb"
+dest_files=["res://.godot/imported/bootle_falling.glb-8938a5a4802274ebf8c362bf39b2373e.scn"]
 
 [params]
 

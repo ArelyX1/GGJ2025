@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://d5qsewj7ypi8"]
+
+[ext_resource type="PackedScene" uid="uid://qcldsc4dnvqh" path="res://Arte/Arte3D/Escenas/dormitorio.glb" id="1_4iiik"]
+[ext_resource type="PackedScene" uid="uid://8i6trg0lf0nt" path="res://Arte/Arte3D/Escenas/celling_fan_spining.glb" id="2_5q8h5"]
+[ext_resource type="PackedScene" uid="uid://6136weld5ndd" path="res://Escenas/Nivel1/Jugador.tscn" id="3_5hjpl"]
+
+[node name="Room" type="Node3D"]
+
+[node name="dormitorio" parent="." instance=ExtResource("1_4iiik")]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(-0.99938, 0, 0.0352135, 0, 1, 0, -0.0352135, 0, -0.99938, 0, 0.994913, -26.546)
+
+[node name="celling_fan_spining" parent="." instance=ExtResource("2_5q8h5")]
+transform = Transform3D(0.291249, 0, 0, 0, 0.291249, 0, 0, 0, 0.291249, 0, 3.87086, 0)
+
+[node name="BurbujaPersonaje" parent="." instance=ExtResource("3_5hjpl")]
+transform = Transform3D(0.291249, 0, 0, 0, 0.291249, 0, 0, 0, 0.291249, 7.94683, 1.85494, 0)

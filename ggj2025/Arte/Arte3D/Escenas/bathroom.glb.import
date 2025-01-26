@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://tifgev3mkfp6"
-path="res://.godot/imported/pencil_rolling.glb-7e7d20ce9e1177239e1afa254715cceb.scn"
+uid="uid://4bb74bwj3k5d"
+path="res://.godot/imported/bathroom.glb-6cf574e0c7de482b97e05d4efe2c7622.scn"
 
 [deps]
 
-source_file="res://Arte/Arte3D/Escenas/pencil_rolling.glb"
-dest_files=["res://.godot/imported/pencil_rolling.glb-7e7d20ce9e1177239e1afa254715cceb.scn"]
+source_file="res://Arte/Arte3D/Escenas/bathroom.glb"
+dest_files=["res://.godot/imported/bathroom.glb-6cf574e0c7de482b97e05d4efe2c7622.scn"]
 
 [params]
 

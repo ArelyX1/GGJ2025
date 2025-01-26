@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://tifgev3mkfp6"
-path="res://.godot/imported/pencil_rolling.glb-7e7d20ce9e1177239e1afa254715cceb.scn"
+uid="uid://c8xhlaas5itoi"
+path="res://.godot/imported/Casa.glb-0bb84a3249f3c2a634a469196bff0d89.scn"
 
 [deps]
 
-source_file="res://Arte/Arte3D/Escenas/pencil_rolling.glb"
-dest_files=["res://.godot/imported/pencil_rolling.glb-7e7d20ce9e1177239e1afa254715cceb.scn"]
+source_file="res://Arte/Arte3D/Escenas/Casa.glb"
+dest_files=["res://.godot/imported/Casa.glb-0bb84a3249f3c2a634a469196bff0d89.scn"]
 
 [params]
 

@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dawfhl0o8kct3"
-path.s3tc="res://.godot/imported/Sala_Textures.png-595a7a0f82c210441f45742a8d8decee.s3tc.ctex"
+uid="uid://c5h1fylngiju3"
+path.s3tc="res://.godot/imported/Gym_Textures.png-680cf37a121203e5a4a115b0f632597d.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -14,8 +14,8 @@ generator_parameters={
 
 [deps]
 
-source_file="res://Arte/Arte3D/Escenas/Sala_Textures.png"
-dest_files=["res://.godot/imported/Sala_Textures.png-595a7a0f82c210441f45742a8d8decee.s3tc.ctex"]
+source_file="res://Arte/Arte3D/Escenas/Gym_Textures.png"
+dest_files=["res://.godot/imported/Gym_Textures.png-680cf37a121203e5a4a115b0f632597d.s3tc.ctex"]
 
 [params]
 

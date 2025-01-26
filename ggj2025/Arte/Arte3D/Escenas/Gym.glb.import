@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://tifgev3mkfp6"
-path="res://.godot/imported/pencil_rolling.glb-7e7d20ce9e1177239e1afa254715cceb.scn"
+uid="uid://bh515uqw2ds86"
+path="res://.godot/imported/Gym.glb-cb2c829e6027c2b670a18a0094a15199.scn"
 
 [deps]
 
-source_file="res://Arte/Arte3D/Escenas/pencil_rolling.glb"
-dest_files=["res://.godot/imported/pencil_rolling.glb-7e7d20ce9e1177239e1afa254715cceb.scn"]
+source_file="res://Arte/Arte3D/Escenas/Gym.glb"
+dest_files=["res://.godot/imported/Gym.glb-cb2c829e6027c2b670a18a0094a15199.scn"]
 
 [params]
 
