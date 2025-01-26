@@ -50,7 +50,6 @@ func _physics_process(delta: float) -> void:
 	var direction := (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 	velocity.x = direction.x * SPEED
 	velocity.z = direction.z * SPEED
-
 	move_and_slide()
 
 func _input(event):
