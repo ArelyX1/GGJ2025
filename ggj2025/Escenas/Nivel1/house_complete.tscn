@@ -53,7 +53,7 @@ size = Vector3(0.001, 11.8858, 116.545)
 size = Vector3(115.463, 0.001, 50.3682)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_1ttxh"]
-size = Vector3(6.10854, 0.001, 15.2393)
+size = Vector3(6.10854, 0.001, 15.8952)
 
 [node name="HouseComplete" type="Node3D"]
 script = ExtResource("1_047vd")
@@ -165,5 +165,5 @@ collision_layer = 2
 collision_mask = 2
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32.1626, 7.62513, 30.0784)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32.1626, 7.62513, 30.4063)
 shape = SubResource("BoxShape3D_1ttxh")
