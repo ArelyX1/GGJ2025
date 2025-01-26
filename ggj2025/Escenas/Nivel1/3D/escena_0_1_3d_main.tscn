@@ -1,9 +1,10 @@
-[gd_scene load_steps=31 format=4 uid="uid://b01malufkfygd"]
+[gd_scene load_steps=32 format=4 uid="uid://b01malufkfygd"]
 
 [ext_resource type="Script" path="res://Escenas/Nivel1/3D/escena_0_1_3d_main.gd" id="1_te0bo"]
 [ext_resource type="PackedScene" uid="uid://d0v1w3b7cl6x8" path="res://Escenas/Nivel1/house_complete.tscn" id="3_qd05o"]
 [ext_resource type="PackedScene" uid="uid://dvkqn111jkott" path="res://Escenas/Nivel1/3D/aro_escene_0.tscn" id="3_wsi8p"]
 [ext_resource type="Script" path="res://Escenas/Nivel1/3D/Movimiento_playerv2.gd" id="4_7bnq3"]
+[ext_resource type="PackedScene" uid="uid://cv50gbi5it8xn" path="res://Escenas/Nivel1/MOVIMIENTO PERSONAJE FUNCIONAL/JugadorBurbujaFunc.tscn" id="4_rbf87"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o5tbb"]
 resource_name = "Material.001"
@@ -392,7 +393,7 @@ mesh = SubResource("ArrayMesh_0y35q")
 skeleton = NodePath("")
 
 [node name="Sphere_003" type="MeshInstance3D" parent="Player"]
-transform = Transform3D(-0.320844, -0.00930353, -0.0196097, -0.00678176, 0.318961, -0.0403668, 0.020618, -0.0398612, -0.31843, 0.090365, 0.45868, 0.619756)
+transform = Transform3D(-0.320844, -0.00930352, -0.0196096, -0.00678175, 0.318961, -0.0403668, 0.020618, -0.0398612, -0.31843, 0.090365, 0.45868, 0.619756)
 mesh = SubResource("ArrayMesh_0djw3")
 skeleton = NodePath("")
 
@@ -412,12 +413,12 @@ mesh = SubResource("ArrayMesh_s1gde")
 skeleton = NodePath("")
 
 [node name="Sphere_008" type="MeshInstance3D" parent="Player"]
-transform = Transform3D(-0.317052, -0.00919358, -0.019378, -0.00910282, 0.317642, -0.00176453, 0.0194208, -0.00120542, -0.317181, 0.00115777, 0.347267, 0.318663)
+transform = Transform3D(-0.317052, -0.00919359, -0.0193781, -0.00910283, 0.317642, -0.00176453, 0.0194209, -0.00120542, -0.317181, 0.00115777, 0.347267, 0.318663)
 mesh = SubResource("ArrayMesh_53erw")
 skeleton = NodePath("")
 
 [node name="Sphere_009" type="MeshInstance3D" parent="Player"]
-transform = Transform3D(-0.320844, -0.00930353, -0.0196097, -0.00678176, 0.318961, -0.0403668, 0.020618, -0.0398612, -0.31843, -0.0876881, 0.463782, 0.617681)
+transform = Transform3D(-0.320844, -0.00930352, -0.0196096, -0.00678175, 0.318961, -0.0403668, 0.020618, -0.0398612, -0.31843, -0.0876881, 0.463782, 0.617681)
 mesh = SubResource("ArrayMesh_f4013")
 skeleton = NodePath("")
 
@@ -450,3 +451,5 @@ shape = SubResource("BoxShape3D_3eerl")
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.0262, -1.68867, -22.6339)
 shape = SubResource("BoxShape3D_h6i7j")
+
+[node name="JUGADOR" parent="." instance=ExtResource("4_rbf87")]
