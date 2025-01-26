@@ -18,7 +18,8 @@ background_mode = 2
 sky = SubResource("Sky_4tdof")
 tonemap_mode = 2
 
-[sub_resource type="SeparationRayShape3D" id="SeparationRayShape3D_nr6h7"]
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_tqkfv"]
+backface_collision = true
 
 [node name="HouseComplete" type="Node3D"]
 
@@ -30,10 +31,17 @@ transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -
 shadow_enabled = true
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(-0.980748, 0, 0.195279, 0, 1, 0, -0.195279, 0, -0.980748, 37.7525, 5.30025, -62.9373)
+transform = Transform3D(0.682734, -0.126699, 0.719599, -0.113115, 0.954651, 0.275404, -0.721859, -0.269425, 0.637441, 37.8015, 39.9672, 32.4996)
+fov = 59.4208
 
 [node name="Casa" parent="." instance=ExtResource("1_4ynlv")]
 transform = Transform3D(66.542, 0, 0, 0, 43.628, 0, 0, 0, 45.9855, 10.6794, -1.58435, -21.9957)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Casa"]
+transform = Transform3D(0.0150281, 0, 0, 0, 0.0229211, 0, 0, 0, 0.021746, -0.160491, 0.036315, 0.478318)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Casa/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_tqkfv")
 
 [node name="bathroom" parent="." instance=ExtResource("2_odn3x")]
 transform = Transform3D(3.79898, 0, 0, 0, 4.70184, 0, 0, 0, 3.16849, -11.6269, 0.157322, 24.7515)
@@ -46,9 +54,3 @@ transform = Transform3D(-5.018, 0, 0.318913, 0, 3.93254, 0, -0.386995, 0, -4.135
 
 [node name="Sala" parent="." instance=ExtResource("5_yqx3a")]
 transform = Transform3D(-4.69645, 0, 0.373388, 0, 5.57422, 0, -0.38125, 0, -4.59961, 50.9741, 3.79483, 16.8875)
-
-[node name="StaticBody3D" type="StaticBody3D" parent="."]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
-visible = false
-shape = SubResource("SeparationRayShape3D_nr6h7")
