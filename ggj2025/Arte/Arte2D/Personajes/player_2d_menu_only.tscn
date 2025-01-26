@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://cg7i7lm8huj3f"]
+[gd_scene load_steps=24 format=3 uid="uid://cg7i7lm8huj3f"]
 
 [ext_resource type="Script" path="res://Arte/Arte2D/Personajes/player_2d_menu_only.gd" id="1_kbo2n"]
 [ext_resource type="Texture2D" uid="uid://dyuf3k2oxr8iw" path="res://Arte/Arte2D/Personajes/Bubble_Idle.png" id="2_wief0"]
@@ -134,6 +134,10 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kkwah"]
 size = Vector2(20, 5)
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_li36r"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5pra0"]
+
 [node name="player_2d_menu_only" type="CharacterBody2D"]
 script = ExtResource("1_kbo2n")
 
@@ -146,3 +150,22 @@ animation = &"General_Sprite"
 position = Vector2(-1, 11)
 shape = SubResource("RectangleShape2D_kkwah")
 debug_color = Color(0.804712, 0.541735, 0.697197, 0.42)
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+visible = false
+offset_left = -154.0
+offset_top = -110.0
+offset_right = -150.0
+offset_bottom = -83.0
+scale = Vector2(47.8859, 1.14584)
+theme_override_styles/fill = SubResource("StyleBoxEmpty_li36r")
+max_value = 3.0
+step = 1.0
+value = 3.0
+fill_mode = 3
+show_percentage = false
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="ProgressBar"]
+visible = false
+scale = Vector2(0.0979705, 3.56675)
+sprite_frames = SubResource("SpriteFrames_5pra0")

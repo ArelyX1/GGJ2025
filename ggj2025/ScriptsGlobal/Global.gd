@@ -4,6 +4,7 @@ var isThreeD : bool
 var isTwoD : bool
 var isMenu = true
 var before = false
+var vida = 3
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	isThreeD = false
