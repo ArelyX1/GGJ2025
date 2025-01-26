@@ -30,7 +30,6 @@ func _physics_process(delta: float) -> void:
 		SPEED = 5.0
 		Global.before = true
 		get_parent().start_camera_transition(get_parent().get_node("JUGADOR/CameraArm2/main_cam_player"), get_parent().get_node("JUGADOR/CameraArm2/PP1"))
-	if 
 	if Input.is_action_just_pressed("ui_cancel"):
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	
@@ -69,3 +68,7 @@ func _input(event):
 		elif event.button_index == MOUSE_BUTTON_WHEEL_DOWN:
 			current_camera_distance = min(current_camera_distance + 1, MAX_CAMERA_DISTANCE)
 			$CameraArm.position.z = -current_camera_distance
+
+
+func _on_area_3d_body_entered(body: Node3D) -> void:
+	get_parent().start_camera_transition(get_parent().get_node("JUGADOR/CameraArm2/main_cam_player"), get_parent().get_node("res://Escenas/win.tscn"))

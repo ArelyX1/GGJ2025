@@ -1,8 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://jdjpy51r33fs"]
+[gd_scene load_steps=9 format=3 uid="uid://jdjpy51r33fs"]
 
 [ext_resource type="Script" path="res://Escenas/Nivel1/3D/escena_0_1_3d_main.gd" id="1_ejgjt"]
 [ext_resource type="PackedScene" uid="uid://dvkqn111jkott" path="res://Escenas/Nivel1/3D/aro_escene_0.tscn" id="2_h00mg"]
-[ext_resource type="PackedScene" uid="uid://d0v1w3b7cl6x8" path="res://Escenas/Nivel1/house_complete.tscn" id="3_anehp"]
+[ext_resource type="PackedScene" uid="uid://dabywus2igbgy" path="res://Escenas/Nivel1/house_complete.tscn" id="3_anehp"]
 [ext_resource type="Script" path="res://Escenas/Nivel1/Tests/progress_bar.gd" id="5_l23cm"]
 [ext_resource type="PackedScene" uid="uid://cv50gbi5it8xn" path="res://Escenas/Nivel1/MOVIMIENTO PERSONAJE FUNCIONAL/JugadorBurbujaFunc.tscn" id="5_tor5q"]
 
@@ -11,6 +11,9 @@ size = Vector3(9.84573, 1.10632, 20.437)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_h6i7j"]
 size = Vector3(132.211, 7.93933, 140.373)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_xq5gl"]
+size = Vector3(8.52588, 1, 14.8239)
 
 [node name="Escena_0_1_3d_main" type="Node3D"]
 script = ExtResource("1_ejgjt")
@@ -54,3 +57,11 @@ step = 1.0
 value = 3.0
 fill_mode = 1
 script = ExtResource("5_l23cm")
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -34.1299, 5.00375, 30.9327)
+shape = SubResource("BoxShape3D_xq5gl")
+
+[connection signal="body_entered" from="Area3D" to="JUGADOR" method="_on_area_3d_body_entered"]
