@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://dbh3rb8grm0k4"]
 
-[ext_resource type="PackedScene" uid="uid://6136weld5ndd" path="res://Escenas/Nivel1/Jugador.tscn" id="1_1encb"]
+[ext_resource type="PackedScene" uid="uid://cv50gbi5it8xn" path="res://Escenas/Nivel1/MOVIMIENTO PERSONAJE FUNCIONAL/JugadorBurbujaFunc.tscn" id="1_k2i00"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_54tfr"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -33,9 +33,6 @@ environment = SubResource("Environment_nukg8")
 transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, 0, 0)
 shadow_enabled = true
 
-[node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.171627, 0.872532, 7.60361)
-
 [node name="Piso" type="MeshInstance3D" parent="."]
 transform = Transform3D(9.37269, 0, 0, 0, 0.431179, 0, 0, 0, 9.95326, 0.0441349, -0.0932518, 0.673969)
 mesh = SubResource("BoxMesh_aaseo")
@@ -45,17 +42,17 @@ mesh = SubResource("BoxMesh_aaseo")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Piso/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_wuc3b")
 
-[node name="RigidBody3D" type="RigidBody3D" parent="."]
+[node name="Caja" type="RigidBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.66779, 0)
 
-[node name="Caja" type="MeshInstance3D" parent="RigidBody3D"]
+[node name="Caja" type="MeshInstance3D" parent="Caja"]
 transform = Transform3D(1, 0, 0, 0, 0.919822, 0.392337, 0, -0.392337, 0.919822, 0, 2.71305, 0)
 mesh = SubResource("BoxMesh_nm1mp")
 skeleton = NodePath("../..")
 
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="RigidBody3D"]
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Caja"]
 transform = Transform3D(1, 0, 0, 0, 0.919822, 0.392337, 0, -0.392337, 0.919822, 0, 2.71305, 0)
 shape = SubResource("ConvexPolygonShape3D_s3j72")
 
-[node name="BurbujaPersonaje" parent="." instance=ExtResource("1_1encb")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0370603, 0.345718, 1.64956)
+[node name="JUGADOR" parent="." instance=ExtResource("1_k2i00")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0188568, 0.562304, 1.13999)
