@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://dtp4vmwcj0bqb"]
+
+[ext_resource type="AudioStream" uid="uid://cpptsgd5cgda8" path="res://Arte/Musica/blue-sky-231778.mp3" id="1_t13mp"]
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D"]
+stream = ExtResource("1_t13mp")
+volume_db = 1.0
+autoplay = true
