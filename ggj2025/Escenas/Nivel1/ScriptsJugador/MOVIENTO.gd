@@ -3,10 +3,10 @@ extends CharacterBody3D
 const mouse_sensitivity_horizontal = 0.1
 const mouse_sensitivity_vertical = 0.1
 
-var SPEED = 5.0
-const JUMP_FORCE = 1.7
-const GRAVITY = -6.0
-const JUMP_TIME = 2.0
+var SPEED = 6.0
+const JUMP_FORCE = 10
+const GRAVITY = -30.0
+const JUMP_TIME = 1
 
 const MIN_CAMERA_DISTANCE = 0.0001
 const MAX_CAMERA_DISTANCE = 1.0
@@ -14,7 +14,6 @@ const MAX_CAMERA_DISTANCE = 1.0
 var jump_timer = 0.0
 var is_jumping = false
 var current_camera_distance = 0.0001
-
 
 
 func _ready():
@@ -30,11 +29,11 @@ func _physics_process(delta: float) -> void:
 		self.visible = true
 		SPEED = 5.0
 		Global.before = true
-		get_parent().start_camera_transition(get_parent().get_node("JUGADOR2/Cam_player"), get_parent().get_node("JUGADOR2/p1"))
+		get_parent().start_camera_transition(get_parent().get_node("JUGADOR/CameraArm2/main_cam_player"), get_parent().get_node("JUGADOR/CameraArm2/PP1"))
 	if Input.is_action_just_pressed("ui_cancel"):
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	
-	if Input.is_action_just_pressed("jump") and is_on_floor():
+	if Input.is_action_just_pressed("jump"):
 		velocity.y = JUMP_FORCE
 		jump_timer = JUMP_TIME
 		is_jumping = true
@@ -47,7 +46,7 @@ func _physics_process(delta: float) -> void:
 	if not is_on_floor() and not is_jumping:
 		velocity.y += GRAVITY * delta
 
-	var input_dir := Input.get_vector("left", "right", "down", "up")
+	var input_dir := Input.get_vector("3d_left", "3d_right", "down", "up")
 	var direction := (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 	velocity.x = direction.x * SPEED
 	velocity.z = direction.z * SPEED

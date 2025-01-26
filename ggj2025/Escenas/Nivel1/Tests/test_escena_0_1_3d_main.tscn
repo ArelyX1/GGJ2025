@@ -1,0 +1,45 @@
+[gd_scene load_steps=7 format=3 uid="uid://jdjpy51r33fs"]
+
+[ext_resource type="Script" path="res://Escenas/Nivel1/3D/escena_0_1_3d_main.gd" id="1_ejgjt"]
+[ext_resource type="PackedScene" uid="uid://dvkqn111jkott" path="res://Escenas/Nivel1/3D/aro_escene_0.tscn" id="2_h00mg"]
+[ext_resource type="PackedScene" uid="uid://d0v1w3b7cl6x8" path="res://Escenas/Nivel1/house_complete.tscn" id="3_anehp"]
+[ext_resource type="PackedScene" uid="uid://cv50gbi5it8xn" path="res://Escenas/Nivel1/MOVIMIENTO PERSONAJE FUNCIONAL/JugadorBurbujaFunc.tscn" id="5_tor5q"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_3eerl"]
+size = Vector3(9.84573, 1.10632, 20.437)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_h6i7j"]
+size = Vector3(132.211, 7.93933, 140.373)
+
+[node name="Escena_0_1_3d_main" type="Node3D"]
+script = ExtResource("1_ejgjt")
+
+[node name="aro_escene0" parent="." instance=ExtResource("2_h00mg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30.2001, 11.2081, -52.2087)
+
+[node name="HouseComplete" parent="." instance=ExtResource("3_anehp")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.90496, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -33.656, 8.86723, -60.8314)
+shape = SubResource("BoxShape3D_3eerl")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.0262, -1.68867, -22.6339)
+shape = SubResource("BoxShape3D_h6i7j")
+
+[node name="camera_2d" type="Camera3D" parent="."]
+transform = Transform3D(-1, 8.74228e-08, 3.82137e-15, 0, -4.37114e-08, 1, 8.74228e-08, 1, 4.37114e-08, -30.1973, 13.7712, -51.8916)
+
+[node name="JUGADOR" parent="." instance=ExtResource("5_tor5q")]
+transform = Transform3D(0.767534, 0, 0.641008, 0, 1, 0, -0.641008, 0, 0.767534, -14.8426, 5.75883, -39.7016)
+
+[node name="CameraArm2" type="Node3D" parent="JUGADOR"]
+
+[node name="main_cam_player" type="Camera3D" parent="JUGADOR/CameraArm2"]
+transform = Transform3D(1, 8.74228e-08, -3.19744e-14, -8.44439e-08, 0.965926, 0.258819, -2.26267e-08, 0.258819, -0.965926, 0, 1.48531, -1.33937)
+
+[node name="PP1" type="Node3D" parent="JUGADOR/CameraArm2"]
+transform = Transform3D(-1, -8.74228e-08, 0, -8.44439e-08, 0.965926, 0.258819, -2.26267e-08, 0.258819, -0.965926, 5.96046e-08, 1.485, -1.339)

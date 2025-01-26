@@ -384,6 +384,7 @@ transform = Transform3D(-1, 8.74228e-08, 3.82137e-15, 0, -4.37114e-08, 1, 8.7422
 
 [node name="Player" type="CharacterBody3D" parent="."]
 transform = Transform3D(-0.0314631, 0, -0.999505, 0, 1, 0, 0.999505, 0, -0.0314631, -29.6351, 11.597, -52.209)
+visible = false
 up_direction = Vector3(-0.999452, 0.0330944, 0)
 script = ExtResource("4_7bnq3")
 

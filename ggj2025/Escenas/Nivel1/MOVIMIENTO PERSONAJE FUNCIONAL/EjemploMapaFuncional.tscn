@@ -1,6 +1,7 @@
-[gd_scene load_steps=9 format=3 uid="uid://dbh3rb8grm0k4"]
+[gd_scene load_steps=10 format=3 uid="uid://dbh3rb8grm0k4"]
 
 [ext_resource type="PackedScene" uid="uid://cv50gbi5it8xn" path="res://Escenas/Nivel1/MOVIMIENTO PERSONAJE FUNCIONAL/JugadorBurbujaFunc.tscn" id="1_k2i00"]
+[ext_resource type="PackedScene" uid="uid://dvkqn111jkott" path="res://Escenas/Nivel1/3D/aro_escene_0.tscn" id="2_h1i08"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_54tfr"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -54,5 +55,19 @@ skeleton = NodePath("../..")
 transform = Transform3D(1, 0, 0, 0, 0.919822, 0.392337, 0, -0.392337, 0.919822, 0, 2.71305, 0)
 shape = SubResource("ConvexPolygonShape3D_s3j72")
 
-[node name="JUGADOR" parent="." instance=ExtResource("1_k2i00")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0188568, 0.562304, 1.13999)
+[node name="JUGADOR2" parent="." instance=ExtResource("1_k2i00")]
+transform = Transform3D(0.767534, 0, 0.641008, 0, 1, 0, -0.641008, 0, 0.767534, 0, 0.948991, 2.68858)
+
+[node name="CameraArm2" type="Node3D" parent="JUGADOR2"]
+
+[node name="main_cam_player" type="Camera3D" parent="JUGADOR2/CameraArm2"]
+transform = Transform3D(1, 8.74228e-08, -3.19744e-14, -8.44439e-08, 0.965926, 0.258819, -2.26267e-08, 0.258819, -0.965926, 0, 1.48531, -1.33937)
+
+[node name="PP1" type="Node3D" parent="JUGADOR2/CameraArm2"]
+transform = Transform3D(-1, -8.74228e-08, 0, -8.44439e-08, 0.965926, 0.258819, -2.26267e-08, 0.258819, -0.965926, 5.96046e-08, 1.485, -1.339)
+
+[node name="aro_escene0" parent="." instance=ExtResource("2_h1i08")]
+transform = Transform3D(0.767534, 0, 0.641008, 0, 1, 0, -0.641008, 0, 0.767534, 0, 0.373148, 0)
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 2.3289, 0)

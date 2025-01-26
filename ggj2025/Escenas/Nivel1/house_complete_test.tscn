@@ -1,0 +1,59 @@
+[gd_scene load_steps=11 format=3 uid="uid://cpepgaopnuqjc"]
+
+[ext_resource type="PackedScene" uid="uid://c8xhlaas5itoi" path="res://Arte/Arte3D/Escenas/Casa.glb" id="1_jtyc4"]
+[ext_resource type="PackedScene" uid="uid://4bb74bwj3k5d" path="res://Arte/Arte3D/Escenas/bathroom.glb" id="2_fohcj"]
+[ext_resource type="PackedScene" uid="uid://d5qsewj7ypi8" path="res://Escenas/Nivel1/room.tscn" id="3_6uatx"]
+[ext_resource type="PackedScene" uid="uid://bh515uqw2ds86" path="res://Arte/Arte3D/Escenas/Gym.glb" id="4_o5iph"]
+[ext_resource type="PackedScene" uid="uid://b7dy1qkxc2lut" path="res://Arte/Arte3D/Escenas/sala.tscn" id="5_y7q7t"]
+[ext_resource type="PackedScene" uid="uid://na7y7i3kyyj1" path="res://Arte/Arte3D/Escenas/active_fan.tscn" id="6_anbdv"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_jauqg"]
+sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+
+[sub_resource type="Sky" id="Sky_4tdof"]
+sky_material = SubResource("ProceduralSkyMaterial_jauqg")
+
+[sub_resource type="Environment" id="Environment_tpr6u"]
+background_mode = 2
+sky = SubResource("Sky_4tdof")
+tonemap_mode = 2
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_tqkfv"]
+backface_collision = true
+
+[node name="HouseComplete" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_tpr6u")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 47.915, 103.625, 0)
+shadow_enabled = true
+
+[node name="Casa" parent="." instance=ExtResource("1_jtyc4")]
+transform = Transform3D(66.542, 0, 0, 0, 43.628, 0, 0, 0, 45.9855, 10.6794, -1.58435, -21.9957)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Casa"]
+transform = Transform3D(0.0150281, 0, 0, 0, 0.0229211, 0, 0, 0, 0.021746, -0.160491, 0.036315, 0.478318)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Casa/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_tqkfv")
+
+[node name="bathroom" parent="." instance=ExtResource("2_fohcj")]
+transform = Transform3D(3.79898, 0, 0, 0, 4.70184, 0, 0, 0, 3.16849, -11.6269, 0.157322, 24.7515)
+
+[node name="Room" parent="." instance=ExtResource("3_6uatx")]
+transform = Transform3D(5.99879, 0, 0, 0, 6.31466, 0, 0, 0, 7.25966, -14.327, 1.99372, -49.5403)
+
+[node name="Gym" parent="." instance=ExtResource("4_o5iph")]
+transform = Transform3D(-5.018, 0, 0.318913, 0, 3.93254, 0, -0.386995, 0, -4.13521, 50.6984, 1.00982, -50.4148)
+
+[node name="Sala" parent="." instance=ExtResource("5_y7q7t")]
+transform = Transform3D(-4.69645, 0, 0.373388, 0, 5.57422, 0, -0.38125, 0, -4.59961, 50.9741, 3.79483, 16.8875)
+
+[node name="active_fan" parent="." instance=ExtResource("6_anbdv")]
+transform = Transform3D(1, 0, 0, 0, 0.999693, 0.0247811, 0, -0.0247811, 0.999693, 53.4041, 24.9331, 16.6718)
+
+[node name="active_fan2" parent="." instance=ExtResource("6_anbdv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 54, 17, -53)
