@@ -1,10 +1,11 @@
-[gd_scene load_steps=10 format=3 uid="uid://d0v1w3b7cl6x8"]
+[gd_scene load_steps=11 format=3 uid="uid://d0v1w3b7cl6x8"]
 
 [ext_resource type="PackedScene" uid="uid://c8xhlaas5itoi" path="res://Arte/Arte3D/Escenas/Casa.glb" id="1_4ynlv"]
 [ext_resource type="PackedScene" uid="uid://4bb74bwj3k5d" path="res://Arte/Arte3D/Escenas/bathroom.glb" id="2_odn3x"]
 [ext_resource type="PackedScene" uid="uid://d5qsewj7ypi8" path="res://Escenas/Nivel1/room.tscn" id="3_r4cu3"]
 [ext_resource type="PackedScene" uid="uid://bh515uqw2ds86" path="res://Arte/Arte3D/Escenas/Gym.glb" id="4_1i68l"]
 [ext_resource type="PackedScene" uid="uid://b7dy1qkxc2lut" path="res://Arte/Arte3D/Escenas/sala.tscn" id="5_yqx3a"]
+[ext_resource type="PackedScene" uid="uid://na7y7i3kyyj1" path="res://Arte/Arte3D/Escenas/active_fan.tscn" id="6_ru18c"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_jauqg"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -50,3 +51,9 @@ transform = Transform3D(-5.018, 0, 0.318913, 0, 3.93254, 0, -0.386995, 0, -4.135
 
 [node name="Sala" parent="." instance=ExtResource("5_yqx3a")]
 transform = Transform3D(-4.69645, 0, 0.373388, 0, 5.57422, 0, -0.38125, 0, -4.59961, 50.9741, 3.79483, 16.8875)
+
+[node name="active_fan" parent="." instance=ExtResource("6_ru18c")]
+transform = Transform3D(1, 0, 0, 0, 0.999693, 0.0247811, 0, -0.0247811, 0.999693, 53.4041, 24.9331, 16.6718)
+
+[node name="active_fan2" parent="." instance=ExtResource("6_ru18c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 54, 17, -53)
