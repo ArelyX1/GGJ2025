@@ -1,12 +1,9 @@
-[gd_scene load_steps=30 format=4 uid="uid://b01malufkfygd"]
+[gd_scene load_steps=31 format=4 uid="uid://b01malufkfygd"]
 
 [ext_resource type="Script" path="res://Escenas/Nivel1/3D/escena_0_1_3d_main.gd" id="1_te0bo"]
 [ext_resource type="PackedScene" uid="uid://d0v1w3b7cl6x8" path="res://Escenas/Nivel1/house_complete.tscn" id="3_qd05o"]
 [ext_resource type="PackedScene" uid="uid://dvkqn111jkott" path="res://Escenas/Nivel1/3D/aro_escene_0.tscn" id="3_wsi8p"]
 [ext_resource type="Script" path="res://Escenas/Nivel1/3D/Movimiento_playerv2.gd" id="4_7bnq3"]
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_3eerl"]
-size = Vector3(9.84573, 1, 20.437)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o5tbb"]
 resource_name = "Material.001"
@@ -367,6 +364,12 @@ _data = {
 [sub_resource type="SphereShape3D" id="SphereShape3D_ofaoh"]
 radius = 0.45198
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_3eerl"]
+size = Vector3(9.84573, 1.10632, 20.437)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_h6i7j"]
+size = Vector3(132.211, 7.93933, 140.373)
+
 [node name="Escena_0_1_3d_main" type="Node3D"]
 script = ExtResource("1_te0bo")
 
@@ -375,17 +378,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30.2001, 11.2081, -52.2087)
 
 [node name="HouseComplete" parent="." instance=ExtResource("3_qd05o")]
 
-[node name="StaticBody3D" type="StaticBody3D" parent="."]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -33.656, 10.7303, -60.8314)
-shape = SubResource("BoxShape3D_3eerl")
-
 [node name="camera_2d" type="Camera3D" parent="."]
 transform = Transform3D(-1, 8.74228e-08, 3.82137e-15, 0, -4.37114e-08, 1, 8.74228e-08, 1, 4.37114e-08, -30.1973, 13.7712, -51.8916)
 
 [node name="Player" type="CharacterBody3D" parent="."]
-transform = Transform3D(-0.0314631, 0, -0.999505, 0, 1, 0, 0.999505, 0, -0.0314631, -30.2, 11.4939, -52.209)
+transform = Transform3D(-0.0314631, 0, -0.999505, 0, 1, 0, 0.999505, 0, -0.0314631, -29.6351, 11.597, -52.209)
 up_direction = Vector3(-0.999452, 0.0330944, 0)
 script = ExtResource("4_7bnq3")
 
@@ -437,8 +434,19 @@ playback_auto_capture_duration = -1.1
 transform = Transform3D(1, 8.74228e-08, -3.19744e-14, -8.44439e-08, 0.965926, 0.258819, -2.26267e-08, 0.258819, -0.965926, 0, 1.48531, -1.33937)
 
 [node name="p1" type="Node3D" parent="Player/CameraArm"]
-transform = Transform3D(-1, 8.74228e-08, 0, -8.44439e-08, -0.965926, -0.258819, -2.26267e-08, -0.258819, 0.965926, 0, 1.485, -1.339)
+transform = Transform3D(-0.997388, 0.0213378, 0.0690037, 0.0471168, 0.916313, 0.397683, -0.0547432, 0.399895, -0.914925, 0.00313187, 1.485, -1.2391)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Player"]
 transform = Transform3D(-0.679889, 0, -0.0450217, 0, 0.60002, 0, 0.0499995, 0, -0.612201, 0.00270709, 0.329478, 0.317412)
 shape = SubResource("SphereShape3D_ofaoh")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.90496, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -33.656, 8.86723, -60.8314)
+shape = SubResource("BoxShape3D_3eerl")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.0262, -1.68867, -22.6339)
+shape = SubResource("BoxShape3D_h6i7j")

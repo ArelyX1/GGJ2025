@@ -4,12 +4,13 @@ const mouse_sensitivity_horizontal = 0.1
 const mouse_sensitivity_vertical = 0.1
 
 var SPEED = 5.0
-const JUMP_FORCE = 1.7
+const JUMP_FORCE = 1.5
 const GRAVITY = -6.0
-const JUMP_TIME = 2.0
+const JUMP_TIME = 2
+
 
 const MIN_CAMERA_DISTANCE = 0.0001
-const MAX_CAMERA_DISTANCE = 1.0
+const MAX_CAMERA_DISTANCE = 2.0
 
 var jump_timer = 0.0
 var is_jumping = false
@@ -25,7 +26,7 @@ func _ready():
 	self.visible = false
 
 
-func _physics_process(delta: float) -> void:
+func _physics_process(delta: float):
 	if Global.isMenu == false && Global.before == false:
 		self.visible = true
 		SPEED = 5.0
