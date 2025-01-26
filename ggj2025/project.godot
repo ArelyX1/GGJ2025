@@ -18,6 +18,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 Global="*res://ScriptsGlobal/Global.gd"
+BgMusic="*res://Escenas/bg_music.tscn"
 
 [display]
 
